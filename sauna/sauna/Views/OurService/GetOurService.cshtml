@@ -1,0 +1,49 @@
+﻿@model IEnumerable<sauna.Models.OurService>
+<div class="spa-agile">
+    <h3 class="tittle fea">Featured Services</h3>
+    @{  int index = 1;
+        foreach (var item in Model)
+        {
+
+            
+            if (index>4) { index = 1;  }
+            if (index == 1)
+            {
+            <div class="col-md-3 spa-grid">
+                <i class="fa fa-asl-interpreting" aria-hidden="true"></i>
+                <h4> @item.Title </h4>
+            </div>
+            }
+
+            if (index == 2)
+            {
+            <div class="col-md-3 spa-grid">
+                <i class="fa fa-bed"></i>
+                <h4>@item.Title </h4>
+            </div>
+            }
+            if (index == 3)
+            {
+            <div class="col-md-3 spa-grid lost">
+                <i class="fa fa-envira" aria-hidden="true"></i>
+                <h4>@item.Title </h4>
+            </div>
+            }
+            if (index == 4)
+            {
+            <div class="col-md-3 spa-grid lost">
+
+                <i class="fa fa-pied-piper" aria-hidden="true"></i>
+
+
+                <h4>@item.Title </h4>
+
+
+            </div>
+            }
+
+            index += 1;
+        }
+    }    
+        <div class="clearfix"> </div>
+</div>

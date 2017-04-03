@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "HOMEWORK";
+    Layout = null;
+
+}
+
+<h2>HOMEWORK</h2>
+
+<style type="text/css">
+.borderGreen{
+border:1px solid green;
+}
+.borderRed{
+  border:1px solid RED;
+
+} 
+
+</style>
+<div id="divGreen">
+    <div id="divOn" class="borderGreen">
+        Oen
+    </div>
+
+    <div id="divTw" class="borderGreen">
+        Tow
+    </div>
+
+    <div id="divTr" class="borderGreen">
+        Three
+    </div>
+</div>
+<div id="divYellow">
+    <div id="divFo" class="borderRed">
+        Four
+    </div>
+
+    <div id="divFi" class="borderRed">
+        Five
+    </div>
+
+    <div id="divSx" class="borderRed">
+        Sex
+    </div>
+</div>
+    <input type="button" id="btnOk" class="btn-info" name="btnOOk" value="Click Here" />
+
+    <script src="~/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#btnOk").click(function () {
+                //$("#divOn").css("background-color", "green"); $("#divTw").css("background-color", "green"); $("#divTr").css("background-color", "green");
+                //$("#divFo").css("background-color", "yellow"); $("#divFi").css("background-color", "yellow"); $("#divSx").css("background-color", "yellow");
+                $("#divGreen>div").css("background-color", "green");
+                $("#divYellow>div").css("background-color", "Yellow");
+            }
+            )
+        });
+    </script>
